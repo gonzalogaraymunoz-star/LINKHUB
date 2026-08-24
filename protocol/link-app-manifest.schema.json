@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://link.local/schemas/link-app-manifest.schema.json",
+  "title": "LINK App Manifest",
+  "type": "object",
+  "required": ["id", "name", "version", "home"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "description": { "type": "string" },
+    "home": { "type": "string", "format": "uri" },
+    "health": { "type": "string" },
+    "context": { "type": "string" },
+    "capabilities": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "path"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "path": { "type": "string" }
+        }
+      }
+    }
+  }
+}

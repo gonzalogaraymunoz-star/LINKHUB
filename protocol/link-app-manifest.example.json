@@ -1,0 +1,14 @@
+{
+  "$schema": "./link-app-manifest.schema.json",
+  "id": "linkvoice",
+  "name": "LINK Voice",
+  "version": "1.0.0",
+  "description": "Producto de voz del ecosistema LINK.",
+  "home": "https://linkvoice-smoky.vercel.app",
+  "health": "/api/health",
+  "context": "/api/link-context",
+  "capabilities": ["voice", "ai"],
+  "anchors": [
+    { "id": "home", "label": "Abrir app", "path": "/" }
+  ]
+}

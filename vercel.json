@@ -1,0 +1,43 @@
+{
+  "functions": {
+    "api/chat.js": {
+      "memory": 512,
+      "maxDuration": 60
+    },
+    "api/probe.js": {
+      "memory": 256,
+      "maxDuration": 15
+    },
+    "api/probe-all.js": {
+      "memory": 512,
+      "maxDuration": 30
+    },
+    "api/metrics.js": {
+      "memory": 256,
+      "maxDuration": 15
+    },
+    "api/vercel-status.js": {
+      "memory": 256,
+      "maxDuration": 20
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}
