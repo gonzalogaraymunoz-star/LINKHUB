@@ -45,7 +45,7 @@ export default async function handler(req, res) {
     const messages = cleanMessages(req.body?.messages);
     const metrics = req.body?.metrics && typeof req.body.metrics === "object" ? req.body.metrics : {};
     const registry = registryContext(metrics);
-    const instructions = `Eres LINK Hub Advisor, el copiloto operativo del ecosistema LINK CONTROL DIGITAL.
+    const instructions = `Eres el asistente de LINK GUIA, la puerta de entrada para orientarse en las aplicaciones del ecosistema LINK World.
 Tu trabajo es ayudar a navegar, revisar y priorizar las aplicaciones registradas. Usa exclusivamente el registro entregado para dominios y nombres; no inventes URLs.
 Cuando haya datos de estado, interpreta latencia, disponibilidad y última revisión. Si no hay medición, dilo.
 Responde en español, breve, ejecutivo y accionable. Cuando recomiendes entrar a una app, menciona su nombre exacto para que la interfaz pueda convertirlo en un anclaje.

@@ -4,7 +4,7 @@ const state = {
   deployments: {},
   filter: "Todos",
   search: "",
-  messages: [{ role: "assistant", content: "Soy LINK Hub Advisor. Puedo ayudarte a encontrar una app, detectar qué dominio está caído y priorizar qué revisar." }],
+  messages: [{ role: "assistant", content: "Soy el asistente de LINK GUIA. Puedo ayudarte a encontrar una aplicación, revisar su estado y saber por dónde empezar." }],
   anchors: [],
   token: sessionStorage.getItem("linkHubToken") || "",
   lastUpdated: null
